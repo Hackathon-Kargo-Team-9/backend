@@ -5,6 +5,7 @@ class Truck(models.Model):
     plate_type = models.CharField(max_length=100)
     truck_type = models.CharField(max_length=100)
     production_year = models.IntegerField()
+    status = models.CharField(max_length=100)
     
     def __str__(self):
         return self.plate_number
