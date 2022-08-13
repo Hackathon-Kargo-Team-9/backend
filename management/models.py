@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+class Truck(models.Model):
+    plate_number = models.CharField(max_length=100)
+    plate_type = models.CharField(max_length=100)
+    truck_type = models.CharField(max_length=100)
+    production_year = models.IntegerField()
+    
+    def __str__(self):
+        return self.plate_number
