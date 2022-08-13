@@ -10,7 +10,7 @@ class Truck(models.Model):
     def __str__(self):
         return self.plate_number
 
-class User(models.Model):
+class Userz(models.Model):
     name = models.CharField(max_length=100)
     role = models.CharField(max_length=100)
     

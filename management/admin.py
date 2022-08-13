@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Truck, User
+from .models import Truck, Userz
 
 admin.site.register(Truck)
-admin.site.register(User)
+admin.site.register(Userz)
