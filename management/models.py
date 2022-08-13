@@ -23,5 +23,8 @@ class Driver(models.Model):
     phone_number = models.CharField(max_length=20)
     driver_license = models.CharField(max_length=20)
     create_time = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.name
 
     
