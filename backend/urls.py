@@ -19,7 +19,7 @@ from rest_framework import routers
 from management import views 
 
 router = routers.DefaultRouter()                   
-router.register(r'truck', views.TruckView, 'truck')  
+router.register(r'', views.TruckView, 'truck')  
 
 urlpatterns = [
     path('admin/', admin.site.urls),   
