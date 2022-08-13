@@ -12,18 +12,18 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path,include
-from rest_framework import routers
 
-from management import views
+from django.contrib import admin
+from django.urls import path,include               
+from rest_framework import routers             
+from management import views         
+from shipment import views as shipmentViews
 
 router = routers.DefaultRouter()                   
-router.register(r'truck', views.TruckView, 'truck')
-router.register(r'userz', views.UserzView, 'userz')
+router.register(r'truck', views.TruckView, 'truck')      
+router.register(r'userz', views.UserzView, 'userz')     
+router.register(r'shipment', shipmentViews.ShipmentView, 'shipment') 
 router.register(r'driver', views.DriverView, 'driver')
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),   
