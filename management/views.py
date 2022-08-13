@@ -1,7 +1,8 @@
-from django.shortcuts import render
-from .serializers import TruckSerializer, UserzSerializer
+from .serializers import TruckSerializer, UserzSerializer, DriverSerializer
 from rest_framework import viewsets      
-from .models import Truck, Userz               
+from .models import Truck, Userz, Driver
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 class TruckView(viewsets.ModelViewSet):  
     serializer_class = TruckSerializer   
@@ -9,4 +10,8 @@ class TruckView(viewsets.ModelViewSet):
 
 class UserzView(viewsets.ModelViewSet):  
     serializer_class = UserzSerializer   
-    queryset = Userz.objects.all()   
+    queryset = Userz.objects.all()
+
+class DriverView(viewsets.ModelViewSet):
+    serializer_class = DriverSerializer
+    queryset = Driver.objects.all()

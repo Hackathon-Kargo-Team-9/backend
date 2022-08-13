@@ -16,3 +16,12 @@ class Userz(models.Model):
     
     def __str__(self):
         return self.name
+
+class Driver(models.Model):
+    name = models.CharField(max_length=255)
+    status = models.CharField(max_length=10)
+    phone_number = models.CharField(max_length=20)
+    driver_license = models.CharField(max_length=20)
+    create_time = models.DateTimeField(auto_now_add=True)
+
+    
